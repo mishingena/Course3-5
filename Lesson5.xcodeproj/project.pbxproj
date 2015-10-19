@@ -13,7 +13,19 @@
 		AAB416E91BD30872002FD6F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB416E71BD30872002FD6F2 /* Main.storyboard */; };
 		AAB416EB1BD30872002FD6F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB416EA1BD30872002FD6F2 /* Assets.xcassets */; };
 		AAB416EE1BD30872002FD6F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB416EC1BD30872002FD6F2 /* LaunchScreen.storyboard */; };
+		AAD3D8301BD4415100F8236F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAD3D82F1BD4415100F8236F /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
+		AAD3D8331BD4433900F8236F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD3D8321BD4433900F8236F /* SecondViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA1ED8621BD5967C00D2B03B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAB416D31BD30872002FD6F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA1ED85B1BD592DC00D2B03B;
+			remoteInfo = UpdateVersion;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AAB416DB1BD30872002FD6F2 /* Lesson5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson5.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +38,9 @@
 		AAB416EA1BD30872002FD6F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAB416ED1BD30872002FD6F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAB416EF1BD30872002FD6F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD3D82F1BD4415100F8236F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		AAD3D8311BD4433900F8236F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		AAD3D8321BD4433900F8236F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +82,9 @@
 				AAB416EC1BD30872002FD6F2 /* LaunchScreen.storyboard */,
 				AAB416EF1BD30872002FD6F2 /* Info.plist */,
 				AAB416DE1BD30872002FD6F2 /* Supporting Files */,
+				AAD3D82F1BD4415100F8236F /* Settings.bundle */,
+				AAD3D8311BD4433900F8236F /* SecondViewController.h */,
+				AAD3D8321BD4433900F8236F /* SecondViewController.m */,
 			);
 			path = Lesson5;
 			sourceTree = "<group>";
@@ -81,6 +99,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		AA1ED85B1BD592DC00D2B03B /* UpdateVersion */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "./Scripts/update_version.sh ./Lesson5/Settings.bundle/Root.plist 1.2.42 $(VERSION_TYPE)";
+			buildConfigurationList = AA1ED85C1BD592DC00D2B03B /* Build configuration list for PBXLegacyTarget "UpdateVersion" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/tcsh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = UpdateVersion;
+			passBuildSettingsInEnvironment = 1;
+			productName = UpdateVersion;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		AAB416DA1BD30872002FD6F2 /* Lesson5 */ = {
 			isa = PBXNativeTarget;
@@ -93,6 +128,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				AA1ED8631BD5967C00D2B03B /* PBXTargetDependency */,
 			);
 			name = Lesson5;
 			productName = Lesson5;
@@ -108,6 +144,9 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Azat Almeev";
 				TargetAttributes = {
+					AA1ED85B1BD592DC00D2B03B = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
 					AAB416DA1BD30872002FD6F2 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
@@ -127,6 +166,7 @@
 			projectRoot = "";
 			targets = (
 				AAB416DA1BD30872002FD6F2 /* Lesson5 */,
+				AA1ED85B1BD592DC00D2B03B /* UpdateVersion */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD3D8301BD4415100F8236F /* Settings.bundle in Resources */,
 				AAB416EE1BD30872002FD6F2 /* LaunchScreen.storyboard in Resources */,
 				AAB416EB1BD30872002FD6F2 /* Assets.xcassets in Resources */,
 				AAB416E91BD30872002FD6F2 /* Main.storyboard in Resources */,
@@ -149,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD3D8331BD4433900F8236F /* SecondViewController.m in Sources */,
 				AAB416E61BD30872002FD6F2 /* ViewController.m in Sources */,
 				AAB416E31BD30872002FD6F2 /* AppDelegate.m in Sources */,
 				AAB416E01BD30872002FD6F2 /* main.m in Sources */,
@@ -156,6 +198,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA1ED8631BD5967C00D2B03B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA1ED85B1BD592DC00D2B03B /* UpdateVersion */;
+			targetProxy = AA1ED8621BD5967C00D2B03B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AAB416E71BD30872002FD6F2 /* Main.storyboard */ = {
@@ -177,6 +227,31 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AA1ED85D1BD592DC00D2B03B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSION_TYPE = DEBUG;
+			};
+			name = Debug;
+		};
+		AA1ED85E1BD592DC00D2B03B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSION_TYPE = RELEASE;
+			};
+			name = Release;
+		};
 		AAB416F01BD30872002FD6F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -284,6 +359,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA1ED85C1BD592DC00D2B03B /* Build configuration list for PBXLegacyTarget "UpdateVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA1ED85D1BD592DC00D2B03B /* Debug */,
+				AA1ED85E1BD592DC00D2B03B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AAB416D61BD30872002FD6F2 /* Build configuration list for PBXProject "Lesson5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -300,6 +383,7 @@
 				AAB416F41BD30872002FD6F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

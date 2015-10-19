@@ -16,12 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"name_preference"]);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDefaultsDidChangeNotification:) name:NSUserDefaultsDidChangeNotification object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)userDefaultsDidChangeNotification:(NSNotification *)note {
+    NSLog(@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"name_preference"]);
+}
+
+- (IBAction)returnHere:(UIStoryboardSegue *)sender {
+    
 }
 
 @end
