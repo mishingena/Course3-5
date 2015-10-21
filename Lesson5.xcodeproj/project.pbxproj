@@ -102,7 +102,7 @@
 /* Begin PBXLegacyTarget section */
 		AA1ED85B1BD592DC00D2B03B /* UpdateVersion */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "./Scripts/update_version.sh ./Lesson5/Settings.bundle/Root.plist 1.2.42 $(VERSION_TYPE)";
+			buildArgumentsString = "./Scripts/update_version.sh ./Lesson5/Settings.bundle/Root.plist";
 			buildConfigurationList = AA1ED85C1BD592DC00D2B03B /* Build configuration list for PBXLegacyTarget "UpdateVersion" */;
 			buildPhases = (
 			);
@@ -366,6 +366,7 @@
 				AA1ED85E1BD592DC00D2B03B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAB416D61BD30872002FD6F2 /* Build configuration list for PBXProject "Lesson5" */ = {
 			isa = XCConfigurationList;
